@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Shoop</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+</style>
+<body>
+    <div id="mobileMenu" class=" bg-black text-white h-screen w-1/2 hy-9 fixed hidden flex flex-col justify-center items-center gap-3" onclick="closeMobileMenu()">
+        <a href="index.html">Home</a>
+        <a href="#About">About us</a>
+        <a href="#contac">contac</a>
+        <a href="pesanan.html">Pesanan</a>
+    </div>
+    <!-- nav -->
+    <div class="container mx-auto py-3 ">
+        <div class="container mx-auto flex">'
+            <div class="w-6/12 ps-2">
+                <h1 id="Home" class="text-3xl "><b>Belandja</b></h1>
+            </div>
+            <div class="w-6/12 text-right">
+                <span class="pe-2 md:hidden hover:cursor-pointer " onclick="openMobileMenu()" >&#9776;</span>
+                <div class=" space-x-3 hidden md:block">
+                    <a href="index.html">Home</a>
+                    <a href="#About">About us</a>
+                    <a href="#contac">Contac</a>
+                    <a href="pesanan.html">Pesanan</a>
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+    <div>
+        <div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openMobileMenu(){
+            document.getElementById("mobileMenu").classList.remove('hidden')
+            document.getElementById("mobileMenu").classList.add('flex')
+            
+        }
+        
+        function closeMobileMenu(){
+            document.getElementById("mobileMenu").classList.remove('flex')
+            document.getElementById("mobileMenu").classList.add('hidden')
+        }
+    </script>
+</body>
